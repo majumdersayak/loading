@@ -24,6 +24,17 @@ chmod +x install.sh
 ```bash
 ./install.sh
 ```
+## Usage
+
+Just type
+```bash
+loading
+```
+<div align="center">
+
+![terminal-photo](assets/image.png)
+
+</div>
 
 ## Contribution
 
