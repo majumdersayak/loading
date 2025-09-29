@@ -30,9 +30,13 @@ Just type
 ```bash
 loading
 ```
+## Some Glimpses
+
 <div align="center">
 
 ![terminal-photo](assets/image.png)
+![terminal-photo](assets/image1.png)
+![terminal-photo](assets/image2.png)
 
 </div>
 
