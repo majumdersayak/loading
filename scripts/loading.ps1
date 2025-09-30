@@ -7,20 +7,24 @@ $env:LC_ALL = "en_US.UTF-8"
 $env:LANG = "en_US.UTF-8"
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
 
+# Tool paths
+$ToolDir    = "$env:USERPROFILE\loading\bin"
+$YtDlpPath  = Join-Path $ToolDir "yt-dlp.exe"
+$FfmpegPath = Join-Path $ToolDir "ffmpeg.exe"
+
 $DownloadDir = "$env:USERPROFILE\Downloads"
 
 while ($true) {
     Clear-Host
     Write-Host @"
-.__                    .___.__                
-|  |   _________     __| _/|__| ____    ____  
-|  |  /  _ \__  \   / __ | |  |/    \  / ___\ 
-|  |_(  <_> ) __ \_/ /_/ | |  |   |  \/ /_/  >
-|____/\____(____  /\____ | |__|___|  /\___  / 
-                \/      \/         \//_____/  
+██╗      ██████╗  █████╗ ██████╗ ██╗███╗   ██╗ ██████╗ 
+██║     ██╔═══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝ 
+██║     ██║   ██║███████║██║  ██║██║██╔██╗ ██║██║  ███╗
+██║     ██║   ██║██╔══██║██║  ██║██║██║╚██╗██║██║   ██║
+███████╗╚██████╔╝██║  ██║██████╔╝██║██║ ╚████║╚██████╔╝
+╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 
     [Download media files from Internet]
-    - By Sayak
 "@
 
     Write-Host ""
@@ -44,7 +48,7 @@ while ($true) {
                     if ([string]::IsNullOrWhiteSpace($savepath)) { $savepath = $DownloadDir }
                     New-Item -ItemType Directory -Path $savepath -Force | Out-Null
                     Write-Host "Downloading best video + audio as MP4..."
-                    yt-dlp -f "bestvideo+bestaudio/best" --merge-output-format mp4 -o "$savepath/%(title)s.%(ext)s" $url
+                    & $YtDlpPath -f "bestvideo+bestaudio/best" --merge-output-format mp4 -o "$savepath/%(title)s.%(ext)s" $url
                 }
                 2 {
                     $url = Read-Host "Enter URL"
@@ -52,17 +56,17 @@ while ($true) {
                     if ([string]::IsNullOrWhiteSpace($savepath)) { $savepath = $DownloadDir }
                     New-Item -ItemType Directory -Path $savepath -Force | Out-Null
                     Write-Host "Downloading best audio as MP3..."
-                    yt-dlp -x --audio-format mp3 -o "$savepath/%(title)s.%(ext)s" $url
+                    & $YtDlpPath -x --audio-format mp3 -o "$savepath/%(title)s.%(ext)s" $url
                 }
                 3 {
                     $url = Read-Host "Enter URL"
                     Write-Host "Fetching available formats..."
-                    yt-dlp -F $url
+                    & $YtDlpPath -F $url
                     $fmt = Read-Host "Enter format code (e.g., 22)"
                     $savepath = Read-Host "Save to folder [default: $DownloadDir]"
                     if ([string]::IsNullOrWhiteSpace($savepath)) { $savepath = $DownloadDir }
                     New-Item -ItemType Directory -Path $savepath -Force | Out-Null
-                    yt-dlp -f $fmt -o "$savepath/%(title)s.%(ext)s" $url
+                    & $YtDlpPath -f $fmt -o "$savepath/%(title)s.%(ext)s" $url
                 }
                 4 { continue }
                 Default { Write-Host "Invalid choice. Try again." }
