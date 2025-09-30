@@ -1,6 +1,12 @@
 # loading.ps1
 # PowerShell version of loading.sh
 
+# Force UTF-8 encoding so ASCII art prints correctly
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$env:LC_ALL = "en_US.UTF-8"
+$env:LANG = "en_US.UTF-8"
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
+
 $DownloadDir = "$env:USERPROFILE\Downloads"
 
 while ($true) {
@@ -14,6 +20,7 @@ while ($true) {
 ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 
     [Download media files from Internet]
+    - By Sayak
 "@
 
     Write-Host ""
