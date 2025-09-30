@@ -32,7 +32,7 @@ chmod +x install.sh
 git clone https://github.com/majumdersayak/loading.git
 ```
 ```bash
-cd loading
+cd loading/
 ```
 ```bash
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
