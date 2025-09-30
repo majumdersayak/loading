@@ -54,6 +54,6 @@ if (-not (Test-Path $ffmpegExe)) {
 } else {
     Write-Host " ffmpeg already installed."
 }
-
+Write-Host ""
 Write-Host "Installation complete!"
-Write-Host "Please restart your terminal (or log out & in) then just run: loading"
+Write-Host "Please restart your terminal (or log out `& in) then just run: loading"
