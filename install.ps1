@@ -11,7 +11,7 @@ if (-not (Test-Path $installDir)) {
 }
 
 # Copy main script
-Copy-Item ".\loading.ps1" "$installDir\loading.ps1" -Force
+Copy-Item ".\scripts\loading.ps1" "$installDir\loading.ps1" -Force
 
 # Add to PATH if not already
 $profileScript = "$PROFILE"
