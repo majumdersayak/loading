@@ -57,7 +57,7 @@ loading
 <b>On Windows</b>
 <div align="center">
 
-![powershell-photo](assets/image1.png)
+![powershell-photo](assets/image2.jpg)
 
 </div>
 
