@@ -12,17 +12,19 @@
 - [**ffmpeg**](https://ffmpeg.org/)
 
 ## Installation
+### For Linux / Mac Users
 ```bash
 git clone https://github.com/majumdersayak/loading.git
-```
-```bash
 cd loading
-```
-```bash
 chmod +x install.sh
-```
-```bash
 ./install.sh
+```
+### For Windows Users
+```bash
+git clone https://github.com/majumdersayak/loading.git
+cd loading
+Set-ExecutionPolicy Bypass -Scope Process -Force
+.\install.ps1
 ```
 ## Usage
 
