@@ -13,9 +13,8 @@ while true; do
 |  |_(  <_> ) __ \_/ /_/ | |  |   |  \/ /_/  >
 |____/\____(____  /\____ | |__|___|  /\___  / 
                 \/      \/         \//_____/  
-                                                                                                                  
-    [Download media files from Internet]
 
+    [Download media files from Internet]
     - by Sayak
 EOF
     # First set of choices for users
