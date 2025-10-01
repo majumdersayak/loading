@@ -12,8 +12,9 @@
 - [**yt-dlp**](https://github.com/yt-dlp/yt-dlp)
 - [**ffmpeg**](https://ffmpeg.org/)
 
-## Installation
+## Installation 
 ### For Linux Users
+---
 ```bash
 git clone https://github.com/majumdersayak/loading.git
 cd loading
@@ -21,7 +22,7 @@ chmod +x install.sh
 ./install.sh
 ```
 ### For Windows Users
-
+---
 #### 1st install git from <a href="https://git-scm.com/ target=_blank">https://git-scm.com/</a>
 
 <p>[Git is recommended as when we'll update ! you can just simply update it via git pull]</p>
