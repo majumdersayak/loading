@@ -1,6 +1,6 @@
 <div align="center">
 
-![banner](assets/ascii-art-text.png)
+![banner](assets/banner.png)
 <p>[ Download video & audio files from Internet ]</p>
 
 ---
@@ -42,23 +42,23 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 ## Usage
 
-Just type
+Reopen the terminal / powershell & just type
 ```bash
 loading
 ```
 ## Some Glimpses
 
-<b>On Linux </b>
+<b>On Linux (Omarchy)</b>
 <div align="center">
 
-![terminal-photo](assets/image1.png)
+![terminal-photo](assets/terminal-photo.png)
 
 </div>
 
-<b>On Windows</b>
+<b>On Windows 11</b>
 <div align="center">
 
-![powershell-photo](assets/image2.jpg)
+![powershell-photo](assets/powershell-photo.jpg)
 
 </div>
 
