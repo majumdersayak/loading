@@ -54,6 +54,7 @@ loading
 ![terminal-photo](assets/image.png)
 
 </div>
+
 <b>On Windows</b>
 <div align="center">
 
