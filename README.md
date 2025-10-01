@@ -51,7 +51,7 @@ loading
 <b>On Linux </b>
 <div align="center">
 
-![terminal-photo](assets/image.png)
+![terminal-photo](assets/image1.png)
 
 </div>
 
